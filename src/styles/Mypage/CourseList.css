@@ -2,21 +2,20 @@
     justify-content: center;
     align-items: center;
     min-height: 92vh;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 3vh;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     width: 75vw;
     height: auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .mycourse-list {
     width: 95%;
     margin: 0 auto;
     padding-top: 1vh;
-
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -25,38 +24,43 @@
 .mycourse-list-title-container {
     display: flex;
     justify-content: space-between;
-
-    text-align: left;
     font-size: 1.8em;
     font-weight: bold;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin: 5vh 0;
     color: #333;
     border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 1vh;
 }
 
 .mycourse-create-button {
     float: right;
     margin-top: 0.5em;
     margin-right: 2%;
-
     height: 5vh;
     font-size: 1vw;
-    background-color: #fff;
-    border: 2px #002c75 solid;
+    background-color: #ffffff;
+    border: 2px solid #002c75;
     color: #002c75;
     border-radius: 0.5em;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.mycourse-create-button:hover {
+    background-color: #002c75;
+    color: #ffffff;
 }
 
 .mycourse-list-table {
     width: 100%;
     flex-grow: 1;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     padding: 4vh;
-    margin-bottom: 2vh;
+    margin-bottom: 4vh;
+    overflow: hidden;
 }
 
 .mycourse-list-table thead tr {
@@ -66,16 +70,18 @@
 
 .mycourse-list-table tbody tr {
     border-bottom: 1px solid #dcdcdc;
+    transition: background-color 0.3s;
 }
 
 .mycourse-list-table thead th,
 .mycourse-list-table thead td {
-    padding: 1vh;
+    padding: 1.5vh;
     text-align: left;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2em;
     border-bottom: 1px solid #dcdcdc;
     background-color: #e0f1ff;
+    color: #333;
 }
 
 .course-clickable-row:hover {
@@ -90,34 +96,39 @@
 .mycourse-list-table tbody td {
     padding: 1.5vh;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    color: #555;
 }
 
-/* Pagination Styling */
 .courselist-pagination {
-    margin-top: auto; /* 항상 맨 아래로 이동 */
-    padding: 1vh 0;
+    margin-top: auto;
+    padding: 1.5vh 0;
     text-align: center;
     margin-bottom: 2vh;
 }
 
 .pagination-button {
     margin: 0 1vw;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
+    border: 2px solid #dcdcdc;
+    color: #555;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .pagination-button.active {
-    color: #384955;
+    color: #ffffff;
+    background-color: #384955;
     border: 2px solid #384955;
-    border-radius: 4px;
 }
 
 .pagination-button:hover:not(.active) {
-    background: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .pagination-button:first-of-type,
 .pagination-button:last-of-type {
-    padding: 8px;
+    padding: 0.75em 1em;
 }

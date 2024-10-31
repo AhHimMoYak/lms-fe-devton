@@ -36,7 +36,10 @@
     display: flex;
     align-items: center;
 }
-
+.title-upload-container button{
+    width: 5vw;
+    height: 5vh;
+}
 .input-title {
     flex: 1;
     padding: 1vw;
@@ -45,14 +48,7 @@
 }
 
 .submit-content-button {
-    padding: 1vh 1.5vw;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
     margin-left: 1vw;
-    font-size: 0.8em;
 }
 
 .submit-content-button:hover {

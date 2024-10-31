@@ -4,35 +4,48 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 95%;
+    width: 90%;
     margin: 5vh auto;
-    gap: 1em;
+    gap: 2vw;
+    border-radius: 1.5vw;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background-color: #f7fafc;
+    padding: 2vh;
 }
 
 .live-detail-content {
     flex: 1;
-    padding: 4vh 5vw; /* 위아래 4vh, 좌우 5vw 패딩으로 조금 더 넉넉하게 */
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 5vh 5vw;
+    margin: 0 5%;
     box-sizing: border-box;
     overflow-y: auto;
     background-color: #ffffff;
-    border-radius: 1vw;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 컨텐츠 박스에 그림자 추가 */
+    border-radius: 1.5vw;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .liveSection {
-    margin-bottom: 10vh; /* 섹션 사이 여백을 화면 높이에 따라 */
-    min-height: 20vh; /* 각 섹션 최소 높이 */
+    margin-bottom: 8vh;
+    min-height: 25vh;
+    background-color: #ffffff;
+    border-radius: 1.5vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 3vh;
+    transition: box-shadow 0.3s ease;
+}
+
+.liveSection:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .sectionTitle {
-    font-size: 1.2em;
+    font-size: 1.6em;
     color: #1a202c;
-    margin-bottom: 3vh;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 1vh;
+    margin-bottom: 4vh;
+    border-bottom: 3px solid #e2e8f0;
+    padding-bottom: 2vh;
     text-align: left;
+    font-weight: bold;
 }
 
 .listContainer {
@@ -43,48 +56,50 @@
 
 .listItem {
     background-color: #ffffff;
-    padding: 2.5vh 3vw; /* 더 넉넉한 패딩 */
-    border: 1px solid #e2e8f0; /* 부드러운 경계선 색상 */
-    border-radius: 1vw; /* 둥근 모서리 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
-    margin-bottom: 3vh;
+    padding: 3vh 4vw;
+    border: 1px solid #e2e8f0;
+    border-radius: 2vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4vh;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     text-align: left;
 }
 
 .listItem:hover {
-    background-color: #edf2f7; /* 호버 시 배경색 변경 */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 크기 증가 */
-    transform: translateY(-5px); /* 살짝 위로 올리는 효과 */
+    background-color: #e6f0fa;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
 }
 
 .listItemTitle {
-    margin: 0 0 1.5vh;
-    font-size: 1em; /* 폰트 크기 증가 */
-    color: #002c75; /* 더 깊은 색상으로 가독성 증가 */
+    margin: 0 0 2vh;
+    font-size: 1.2em;
+    color: #003366;
     font-weight: bold;
 }
 
 .listItemDetail {
-    margin: 1vh 0;
-    color: #4a5568; /* 부드러운 텍스트 색상 */
-    font-size: 1em; /* 폰트 크기 조정 */
+    margin: 1.5vh 0;
+    color: #4a5568;
+    font-size: 1.1em;
 }
 
-/* 추가적인 스타일로 버튼 형태의 스타일 추가 */
 .actionButton {
     display: inline-block;
     background-color: #3182ce;
     color: #ffffff;
-    padding: 1vh 2vw;
+    padding: 1.5vh 3vw;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 2vh;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-top: 2vh;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 3vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .actionButton:hover {
-    background-color: #2b6cb0; /* 버튼 호버 시 더 어두운 색상 */
+    background-color: #2b6cb0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }

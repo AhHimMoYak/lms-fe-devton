@@ -1,110 +1,121 @@
 .qna-list-container {
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
+    width: 90%;
+    margin: 5vh auto;
+    padding-top: 2vh;
+    background-color: #f7fafc;
+    border-radius: 2vh;
+    box-shadow: 0 6vh 18vh rgba(0, 0, 0, 0.1);
 }
 
 .courselist-header {
     display: flex;
-    justify-content: space-between; /* 양 끝으로 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
-    padding: 0 2em 0.5em 5.5em;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 6vw;
+    background-color: #e3e8ef;
+    border-radius: 2vh 2vh 0 0;
 }
 
 .courselist-name {
-    font-size: 1.5em;
-    color: #212121;
+    font-size: 2.5vh;
+    color: #2a3a4e;
+    font-weight: bold;
 }
 
-/* 테이블 기본 스타일 */
 .qna-table {
-    width: 80%;
-    border-collapse: collapse; /* 테두리와 셀 사이의 간격 제거 */
-    border-radius: 0.5em;
-    margin-left: 8%;
+    width: 95%;
+    border-collapse: collapse;
+    border-radius: 1.5vh;
+    margin: 3vh auto;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4vh 12vh rgba(0, 0, 0, 0.1);
 }
 
-/* 헤더 스타일 */
 .qna-table th {
-    background-color: #cce1ff;
-    padding: 1em 0.8em;
-    border-bottom: 0.1em solid #ddd;
+    background-color: #60a5fa;
+    padding: 2vh;
+    border-bottom: 0.5vh solid #d1d5db;
     text-align: center;
-    font-size: 0.8em;
-    width: 25%;
+    font-size: 1.8vh;
+    color: #ffffff;
 }
 
 .create-qna {
-    float: right;
-    margin: 5% 10% 0% 10%;
-    width: 10%;
-    height: 100%;
-    border: 0.2em #cce1ff solid;
-    background-color: #fff;
-    border-radius: 0.5em;
-    font-size: 0.8em;
-    color: #002c75;
+    padding: 1vh 2vw;
+    margin: 2vh 3vw;
+    background-color: #3182ce;
+    border: none;
+    border-radius: 2vh;
+    font-size: 1.5vh;
+    color: #ffffff;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* 테이블 행 기본 스타일 */
+.create-qna:hover {
+    background-color: #2b6cb0;
+    transform: scale(1.05);
+}
+
 .qna-table tr {
-    background-color: #f9f9f9; /* 기본 배경색 */
-    transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
-    padding: 0.01em;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-    font-size: 1em;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+    padding: 1.5vh;
+    border-bottom: 0.2vh solid #e2e8f0;
 }
 
-.qna-table th {
-    font-size: 1.1em;
-}
-
-/* 테이블 행: 마우스를 올렸을 때 */
 .qna-table tr:hover {
-    background-color: lightgray;
+    background-color: #f1f5f9;
     cursor: pointer;
 }
 
-/* 테이블 데이터 셀 스타일 */
 .qna-table td {
-    padding: 0.8em;
-    border-bottom: 0.1em solid #ddd;
+    padding: 2vh;
+    border-bottom: 0.2vh solid #e2e8f0;
     text-align: center;
+    font-size: 1.5vh;
+    color: #2d3748;
 }
+
 .answered {
-    color: #002c75;
+    color: #2b6cb0;
+    font-weight: bold;
 }
+
 .not-answered {
-    color: firebrick;
+    color: #e53e3e;
+    font-weight: bold;
 }
-/* 페이지네이션 스타일 */
+
 .qna-pagination {
     display: flex;
     justify-content: center;
-    margin: 1em 0;
-    gap: 0.5em;
+    margin: 3vh 0;
+    gap: 2vw;
 }
 
 .qna-pagination button {
-    padding: 0.2em 0.8em;
-    margin-right: 3%;
+    padding: 2vh 4vw;
     border: none;
-    background-color: white;
+    background-color: #ffffff;
     cursor: pointer;
-    font-size: 0.8em;
-    transition: background-color 0.3s;
+    font-size: 1.5vh;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 1.5vh;
 }
 
 .qna-pagination button.active {
-    border-bottom: 2px solid #000;
-    color: #000000;
+    border-bottom: 0.5vh solid #3182ce;
+    color: #3182ce;
+    font-weight: bold;
+}
+
+.qna-pagination button:hover:not(:disabled) {
+    background-color: #e2e8f0;
+    transform: scale(1.05);
 }
 
 .qna-pagination button:disabled {
     cursor: not-allowed;
+    color: #a0aec0;
 }

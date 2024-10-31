@@ -1,88 +1,99 @@
-/* 전체 폼 컨테이너 */
 .qna-container {
-    background-color: #f0f0f0;
+    background-color: #f9fafc;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.2em 2em 2em 2em;
-    border-radius: 0.5em;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+    padding: 3vh 4vw;
+    border-radius: 1.5vw;
+    width: 70%;
+    margin: 5vh auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* 제목 (h2) 스타일 */
 .qna-post-title {
-    font-size: 1.5em;
-    margin: 0.5em 0;
+    font-size: 2em;
+    margin: 1vh 0;
     font-weight: bold;
+    color: #2a3a4e;
 }
 
-/* 폼 내부 구성 */
 .qna-form {
     width: 100%;
 }
 
-/* 제목 입력 상자 */
 .title-box input {
     width: 100%;
-    height: 5vh;
-    padding: 1em;
-    margin: 1em 0;
+    height: 6vh;
+    padding: 1.5vh;
+    margin: 2vh 0;
     box-sizing: border-box;
-    border-radius: 5px;
-    border: 0.08em solid #ccc;
-    outline: #ccc;
-    font-size: 1em;
-
+    border-radius: 1vh;
+    border: 0.1vh solid #d1d5db;
+    outline: none;
+    font-size: 1.2em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 내용 입력 상자 */
+.title-box input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 10px rgba(49, 130, 206, 0.3);
+}
+
 .content-container {
-    margin-bottom: 1em;
+    margin-bottom: 3vh;
 }
 
 .content-box {
     width: 100%;
-    height: 40vh;
-    padding: 1em;
+    height: 50vh;
+    padding: 2vh;
     box-sizing: border-box;
-    border-radius: 0.3em;
-    border: 0.08em solid #ccc;
-    resize: none; /* 사용자가 크기 조정 불가하게 설정 */
-    font-size: 1em;
-    outline: #ccc;
-    min-height: 50vh;
+    border-radius: 1vh;
+    border: 0.1vh solid #d1d5db;
+    resize: none;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 제출 버튼 */
-.qna-submit-button{
-    float: right;
-    padding: 0.3em 1em;
-    margin-right: 2%;
-    font-size: 0.8em;
+.content-box:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 10px rgba(49, 130, 206, 0.3);
+}
 
-    background-color: #fff;
-    border: 2px #002c75 solid;
-    color: #002c75;
-    border-radius: 0.5em;
+.qna-submit-button {
+    float: right;
+    padding: 1.5vh 2vw;
+    margin-right: 2%;
+    font-size: 1em;
+    background-color: #3182ce;
+    border: none;
+    color: #ffffff;
+    border-radius: 1vh;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.qna-submit-button:hover {
+    background-color: #2b6cb0;
+    transform: scale(1.05);
 }
 
 .qna-back-button {
     float: right;
-    padding: 0.25em 1em 0.2em 1em;
-    margin-top: 0.1em;
+    padding: 1.5vh 2vw;
+    margin-top: 1vh;
     margin-right: 1%;
-
-    width: 5vw;
-    font-size: 0.8em;
-    background-color: #fff;
-    border: 2px #002c75 solid;
+    font-size: 1em;
+    background-color: #ffffff;
+    border: 0.2vh solid #002c75;
     color: #002c75;
-    border-radius: 0.5em;
+    border-radius: 1vh;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.qna-back-button:hover {
+    background-color: #e2e8f0;
+    transform: scale(1.05);
 }

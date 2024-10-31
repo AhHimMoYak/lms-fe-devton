@@ -3,93 +3,119 @@
     flex-direction: row;
     align-items: center;
     width: 60%;
-    margin: 0 auto;
-    justify-content: flex-start;
+    margin: 2vh auto;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 2vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
 }
+
 .input-title-field {
     flex: 4;
-    padding: 0.8vw;
-    font-size: 0.8em;
-    border: 0.07em solid #ccc;
+    padding: 1vh;
+    font-size: 1em;
+    border: 0.1em solid #ccc;
     border-radius: 0.5em;
     margin-right: 1vw;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+.input-title-field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
 .collapsible {
-    background-color: #f1f1f1;
-    color: #444;
+    background-color: #f0f4f8;
+    color: #333;
     cursor: pointer;
-    padding: 10px;
+    padding: 1.5vh;
     width: 100%;
-    border: none;
+    border: 0.1em solid #ccc;
     text-align: left;
     outline: none;
-    font-size: 18px;
-    transition: 0.4s;
-    margin-top: 10px;
-    border-radius: 4px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 2vh;
+    border-radius: 1em;
 }
 
 .collapsible:hover {
-    background-color: #ddd;
+    background-color: #e2e8f0;
+    border-color: #bbb;
 }
 
 .collapsible:after {
     content: '\25BC';
-    font-size: 13px;
+    font-size: 1em;
     color: #777;
     float: right;
-    margin-left: 5px;
+    margin-left: 0.5em;
+    transition: transform 0.3s;
 }
 
 .collapsible.active:after {
     content: '\25B2';
+    transform: rotate(180deg);
 }
+
 .curriculum-submit {
-    flex: 1; /* 버튼 크기 조정 */
+    flex: 1;
     text-align: center;
-    padding: 0.8vw; /* 패딩을 줄여서 버튼 높이를 입력 필드와 맞춤 */
-    font-size: 0.8em;
-    background-color: #28a745;
+    padding: 1vh;
+    font-size: 1em;
+    background-color: #007bff;
     border: none;
     border-radius: 0.5em;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
     width: 20%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.curriculum-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 .curriculum-container {
     width: 80%;
-    margin: 0 auto;
-    padding: 2vw;
-    border: 0.05em solid #ccc;
-    border-radius: 0.5em;
-    background-color: #f9f9f9;
+    margin: 2vh auto;
+    padding: 3vh;
+    border: 0.1em solid #ccc;
+    border-radius: 1em;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .curriculum-input {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 2vh;
 }
 
 .curriculum-input .input-field {
     width: 100%;
-    padding: 0.8vw;
-    font-size: 0.8em;
-    border: 0.07em solid #ccc;
+    padding: 1.2vh;
+    font-size: 1em;
+    border: 0.1em solid #ccc;
     border-radius: 0.5em;
-    margin: 0.1em;
+    margin: 0.5vh 0;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .curriculum-input .input-field:focus {
-    border-color: #666666;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
     outline: none;
-    box-shadow: 0 0 3px #666666;
 }
 
 .input-container {
     display: flex;
     align-items: center;
+    gap: 1vw;
 }
 
 .input-container .input-field {
@@ -98,4 +124,17 @@
 
 .input-container .add-button {
     margin-left: 1vw;
+    padding: 1vh 2vh;
+    font-size: 1em;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-container .add-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
 }
