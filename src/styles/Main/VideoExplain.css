@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #4a90e2;
-    --primary-color-hover: #3a78c3;
-    --bg-color: #f9fafc;
+    --primary-color: #3498db;
+    --primary-color-hover: #2980b9;
+    --bg-color: #f3f7fc;
     --white-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --border-color: #e6e9ef;
-    --header-bg-color: #f0f4f8;
-    --text-color: #34495e;
+    --border-color: #dfe4ea;
+    --header-bg-color: #ecf0f1;
+    --text-color: #2c3e50;
     --highlight-color: #f39c12;
 }
 
@@ -19,51 +19,60 @@ body {
     padding: 0;
 }
 
+/* 공통 Container 스타일 */
 .container {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 80%;
+    width: 85%;
     margin: 5vh auto;
     gap: 2em;
 }
 
+/* Lecture info 스타일 */
 .lecture-info {
     flex: 0 1 25%;
     background-color: var(--white-color);
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0 4px 12px var(--shadow-color);
+    box-shadow: 0 4px 16px var(--shadow-color);
     position: sticky;
     z-index: 10;
     top: 5vh;
 }
 
-.course-provide-button {
-    margin-bottom: 4vh;
-    font-size: 1em;
-    padding: 0.8em;
-    background-color: var(--highlight-color);
-    color: var(--white-color);
-    border-radius: 0.5em;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.course-provide-button:hover {
-    background-color: #e68a00;
-    transform: translateY(-2px);
-}
-
+/* Course provide button 스타일 */
+.course-provide-button,
 .course-provide-button-disabled {
     font-size: 1em;
     margin-bottom: 4vh;
-    font-weight: bold;
-    color: #c0392b;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.course-provide-button {
+    background-color: var(--highlight-color);
+    color: var(--white-color);
+}
+
+.course-provide-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-provide-button-disabled {
+    font-weight: bold;
+    color: #c0392b;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Lecture details 스타일 */
 .lecture-card {
     display: flex;
     flex-direction: column;
@@ -86,20 +95,23 @@ body {
     color: var(--text-color);
 }
 
+/* Lecture details section 스타일 */
 .lecture-details-section {
     flex: 1 1 70%;
     background-color: var(--white-color);
     padding: 2em;
     border-radius: 1em;
-    box-shadow: 0 4px 12px var(--shadow-color);
+    box-shadow: 0 4px 16px var(--shadow-color);
 }
 
+/* Section header 스타일 */
 .section-header h2 {
     font-size: 1.6em;
     margin-bottom: 0.5em;
     color: var(--primary-color);
 }
 
+/* Video course tabs 스타일 */
 .video-course-tabs {
     display: flex;
     justify-content: center;
@@ -115,14 +127,16 @@ body {
     color: var(--white-color);
     cursor: pointer;
     border-radius: 0.5em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .course-tabs button:hover {
     background-color: var(--primary-color-hover);
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Learning goal, chapter info 등 스타일 */
 .learning-goal,
 .chapter-info,
 .instructor-intro,
@@ -132,43 +146,31 @@ body {
 }
 
 .learning-goal h3,
-.completion-criteria h3 {
+.completion-criteria h3,
+.chapter-info h3,
+.instructor-intro h3 {
     font-size: 1.3em;
     color: var(--primary-color);
 }
 
-.curriculum-detail-toggle {
-    font-size: 1em;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin: 0.5vh 1vw;
-    transition: color 0.3s ease;
-    color: var(--primary-color);
-}
-
-.chapter-info h3 {
-    margin-bottom: 1em;
-    font-size: 1.3em;
-    color: var(--primary-color);
-}
-
+/* Curriculum section 스타일 */
 .curriculum-section {
     padding: 0.5em;
     margin-bottom: 0.8em;
     background-color: var(--header-bg-color);
     border-radius: 0.5em;
+    box-shadow: 0 2px 8px var(--shadow-color);
 }
 
 .curriculum-section .section-header {
     padding: 0.7em;
-    background-color: var(--header-bg-color);
-    border-radius: 0.5em;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--header-bg-color);
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .curriculum-section .section-header:hover {
@@ -181,13 +183,13 @@ body {
     font-size: 1.1em;
 }
 
+/* Section content 스타일 */
 .section-content {
     padding: 1em;
-    font-size: 1em;
+    margin-top: 0.5em;
     background-color: var(--white-color);
     border-radius: 0.5em;
     box-shadow: 0 2px 8px var(--shadow-color);
-    margin-top: 0.5em;
 }
 
 .section-content div {
@@ -195,46 +197,23 @@ body {
     font-size: 1em;
 }
 
-.instructor-intro h3 {
-    margin-bottom: 1.5vh;
-    font-size: 1.3em;
-    color: var(--primary-color);
-}
-
-.info-table {
-    font-size: 0.95em;
-    margin-top: 1.5vh;
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px var(--shadow-color);
-    border-radius: 0.5em;
-    overflow: hidden;
-}
-
-.instructor-table {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-/* Table styles */
+/* Info table 스타일 */
+.info-table,
 table {
+    font-size: 0.95em;
+    margin-top: 1.5vh;
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1.5vh;
-    text-align: left;
-    font-family: "Roboto", sans-serif;
-    font-size: 0.95em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--white-color);
     border-radius: 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 table th,
 table td {
     padding: 0.8em;
-    border-bottom: 0.1em solid #e0e0e0;
+    border-bottom: 0.1em solid var(--border-color);
 }
 
 th {
@@ -245,7 +224,7 @@ th {
 }
 
 td {
-    color: #34495e;
+    color: var(--text-color);
 }
 
 tr:nth-child(even) {
@@ -256,11 +235,7 @@ tr:hover {
     background-color: #f1f5f9;
 }
 
-.curriculum-section.open .section-content {
-    display: block;
-}
-
-/* General button styles */
+/* General button 스타일 */
 button {
     font-family: "Roboto", sans-serif;
     font-size: 1em;
@@ -270,5 +245,5 @@ button {
 
 button:hover {
     transform: translateY(-1px);
-    opacity: 0.9;
+    opacity: 0.95;
 }
