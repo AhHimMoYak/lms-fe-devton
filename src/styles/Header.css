@@ -65,8 +65,8 @@
 
 /* 유저 아이콘 및 드롭다운 스타일 */
 .user-icon {
-  width: 2vw;
-  height: 4vh;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
