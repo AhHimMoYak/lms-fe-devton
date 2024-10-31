@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 import useAxios from '/src/hooks/api/useAxios';
+import '/src/styles/Mypage/CourseCreate.css';
 
 function CreateLive() {
     const [title, setTitle] = useState('');
