@@ -1,18 +1,21 @@
 import Body from "../pages/Body";
 import "../styles/Modal.css";
 
-const Modal = ({ closeModal, buttonId }) => {
+import QuizList from "./Main/QuizList.jsx";
+import QuizResult from "./QuizResult.jsx";
+
+const Modal = ({ closeModal, buttonId, liveId, stompClient, quizData, quizState}) => {
     let modalContent;
 
     switch (buttonId) {
         case "send":
-            modalContent = <Body />;
+            modalContent = <QuizList liveId={liveId} quizData={quizData} stompClient={stompClient} />;
             {
                 /* 통신해서 서로 받는 기능에 대한 컴포넌트 넣기*/
             }
             break;
         case "participation":
-            modalContent = <Body />;
+            modalContent = <QuizResult liveId={liveId} quizData={quizData} quizState={quizState}/>;
             {
                 /* 통신해서 서로 받는 기능에 대한 컴포넌트 넣기*/
             }
