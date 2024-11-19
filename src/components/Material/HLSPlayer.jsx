@@ -52,7 +52,7 @@ const HLSPlayer = ({ src }) => {
   }, [hlsInstance]);
 
   return (
-    <div>
+    <div className="video-palyer-container">
       {/* 비디오 요소에서 기본 재생바 숨김 */}
       <video
         ref={videoRef}
