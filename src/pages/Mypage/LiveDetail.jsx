@@ -69,7 +69,7 @@ const LiveDetail = () => {
                 <section className="liveSection">
                     <div className="sectionTitle">현재 라이브중인 강의</div>
                     <ul className="listContainer">
-                        {liveCourses.canStart.map((course) => (
+                        {liveCourses.on.map((course) => (
                             <li key={course.key} className="listItem" onClick={() => handleCourseClick(course.key)}>
                                 <div className="listItemHeader">
                                     <h3 className="listItemTitle">{course.title}</h3>
